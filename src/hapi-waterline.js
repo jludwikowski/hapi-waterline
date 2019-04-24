@@ -3,7 +3,7 @@
  */
 /*global exports: true, require: true*/
 
-var requireDir = require('require-dir'),
+var requireDir = require('require-directory'),
     _ = require('lodash'),
     Waterline = require('waterline'),
     orm = new Waterline();
@@ -40,7 +40,7 @@ exports.plugin = {
         }
 
         _(path).forEach(function (item, index, collection) {
-            var models = requireDir(item, {recurse: true});
+            var models = requireDir( module, item );
 
             var extendedModels = _(models).map(function (model, key, object) {
 

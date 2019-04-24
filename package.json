@@ -27,7 +27,7 @@
     },
     "dependencies": {
         "lodash": "^4.17.4",
-        "require-dir": "^0.3.2",
+        "require-directory": "^2.1.1",
         "waterline": "^0.13.1-9"
     },
     "devDependencies": {
